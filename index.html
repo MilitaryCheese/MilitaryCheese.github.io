@@ -18,11 +18,15 @@
 
   <!-- Material Design Imports -->
   <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
   <!-- Importing Font -->
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Kit Link -->
+  <script src="https://kit.fontawesome.com/42a18a18ee.js" crossorigin="anonymous"></script>
 
   <!-- Custom Overrides -->
   <link href="assets/css/style.min.css" rel="stylesheet" />
@@ -35,12 +39,9 @@
   <header class="mdc-top-app-bar mdc-top-app-bar--fixed mdc-top-app-bar--dense">
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"><span
-          class="mdc-top-app-bar__title">San Francisco, CA</span> </section>
+          class="mdc-top-app-bar__title">Global Wildfire Prediction System</span> </section>
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
-        <button class="mdc-button mdc-button--raised"> <span class="mdc-button__ripple"></span>Analytics</button>
         <button class="mdc-button mdc-button--raised"> <span class="mdc-button__ripple"></span>Log In</button>
-        <!-- <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded"
-          aria-label="Download">account_box</button> -->
       </section>
     </div>
   </header>
@@ -49,10 +50,10 @@
   <div class="page-content">
 
     <div class="right-card-content">
-      <!-- Card One - Input details  -->
-      <div class="mdc-card demo-card card-one">
-        <div class="mdc-card__primary mdc-card_content mdc-card-content-input">
-
+      <!-- Card One - Input/Search details  -->
+      <div class="mdc-card search-card">
+        <div class="mdc-card_content search-card-content">
+          <h3 class="mdc-typography--headline6 search-card-header">Search</h3>
           <div
             class="mdc-text-field mdc-text-field-location mdc-text-field--outlined mdc-text-field--with-trailing-icon ">
             <i class="material-icons mdc-text-field__icon" tabindex="0" role="button">room</i>
@@ -79,20 +80,19 @@
               </div>
             </div>
           </div>
-          <a href="">Check Analytics</a>
+          <button class="mdc-button mdc-button--outlined check-analysis-btn"> <span class="mdc-button__ripple"></span>
+            Learn More</button>
         </div>
       </div>
 
       <!-- Card Two - Map Options  -->
-      <div class="mdc-card demo-card card-one">
-        <div class="mdc-card__primary mdc-card_content">
-
-          <h2 class="demo-card__title mdc-typography mdc-typography--headline6">Map Options</h2>
-
-          <div class="mdc-form-field">
-            <div class="checkbox-area checkbox-1">
+      <!-- <div class="mdc-card map-options-card">
+        <div class="mdc-card__primary mdc-card_content map-options-card-content">
+          <h2 class="__title mdc-typography options-card-header mdc-typography--headline6">Map Options</h2>
+          <div class="mdc-form-field options-checkbox-area">
+            <div class="checkbox-area population-cbx">
               <div class="mdc-checkbox">
-                <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-1" />
+                <input type="checkbox" class="mdc-checkbox__native-control" id="population-cbx" />
                 <div class="mdc-checkbox__background">
                   <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
                     <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
@@ -101,11 +101,11 @@
                 </div>
                 <div class="mdc-checkbox__ripple"></div>
               </div>
-              <label for="checkbox-1">Checkbox xxx</label>
+              <label for="population-cbx">Population spread</label>
             </div>
-            <div class="checkbox-area checkbox-1">
+            <div class="checkbox-area elav-top-cbx">
               <div class="mdc-checkbox">
-                <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-1" />
+                <input type="checkbox" class="mdc-checkbox__native-control" id="elav-top-cbx" />
                 <div class="mdc-checkbox__background">
                   <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
                     <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
@@ -114,16 +114,54 @@
                 </div>
                 <div class="mdc-checkbox__ripple"></div>
               </div>
-              <label for="checkbox-1">Checkbox 1</label>
+              <label for="elav-top-cbx">Elavation topogrpahy</label>
             </div>
-
+            <div class="checkbox-area cities-cbx">
+              <div class="mdc-checkbox">
+                <input type="checkbox" class="mdc-checkbox__native-control" id="cities-cbx" />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+                <div class="mdc-checkbox__ripple"></div>
+              </div>
+              <label for="cities-cbx">Major cities</label>
+            </div>
+            <div class="checkbox-area roads-cbx">
+              <div class="mdc-checkbox">
+                <input type="checkbox" class="mdc-checkbox__native-control" id="roads-cbx" />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+                <div class="mdc-checkbox__ripple"></div>
+              </div>
+              <label for="roads-cbx">Main roads</label>
+            </div>
+            <div class="checkbox-area water-cbx">
+              <div class="mdc-checkbox">
+                <input type="checkbox" class="mdc-checkbox__native-control" id="water-cbx" />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+                <div class="mdc-checkbox__ripple"></div>
+              </div>
+              <label for="water-cbx">Rivers/seas/waterfronts</label>
+            </div>
           </div>
 
         </div>
-      </div>
+      </div> -->
 
       <!-- Card Three - Tabbed -->
-      <div class="mdc-card mdc-tab-area card-two">
+      <div class="mdc-card mdc-tab-area ">
         <div class="mdc-tab-bar" role="tablist">
           <div class="mdc-tab-scroller">
             <div class="mdc-tab-scroller__scroll-area">
@@ -150,20 +188,35 @@
             </div>
           </div>
         </div>
-        <div class="content content--active weather-tab">
-          <div class="main-weather-area">
-            <p class="mdc-typography mdc-typography--subtitle2">Cloudy</p>
-            <h1 lass="mdc-typography mdc-typography--headline1">42°</h1>
-          </div>
-          <div class="sub-weather-area">
-            <p class="mdc-typography mdc-typography--subtitle2">8 mph wind</p>
-            <p class="mdc-typography mdc-typography--subtitle2">23% humidity</p>
-            <p class="mdc-typography mdc-typography--subtitle2">81% chance of rain</p>
-            <button class="mdc-button mdc-button--outlined"> <span class="mdc-button__ripple"></span> Learn
-              More</button>
+        <div class="content content--active">
+          <div class="weather-tab">
+            <h2 class="__title mdc-typography weather-header mdc-typography--headline6">Weather</h2>
+            <div class="weather-content">
+              <div class="main-weather-area">
+                <div class="descriptive-weather">
+                  <i class="fas fa-cloud"></i>
+                  <p class="mdc-typography mdc-typography--subtitle2">Cloudy</p>
+                </div>
+                <h1 class="mdc-typography mdc-typography--headline3">42°</h1>
+              </div>
+              <div class="sub-weather-area">
+                <div class="weather-desc wind-span">
+                  <i class="fas fa-wind"></i>
+                  <p class="mdc-typography mdc-typography--subtitle2">8 mph wind</p>
+                </div>
+                <div class="weather-desc humidity-span">
+                  <i class="fas fa-tint"></i>
+                  <p class="mdc-typography mdc-typography--subtitle2">23% humidity</p>
+                </div>
+                <div class="weather-desc rain-span">
+                  <i class="fas fa-cloud-rain"></i>
+                  <p class="mdc-typography mdc-typography--subtitle2">81% chance of rain</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="content">
+        <div class="content content-two">
           <h3 class="mdc-typography mdc-typography--subtitle2">Content two</h3>
         </div>
 
@@ -173,7 +226,7 @@
     <div class="left-card-content">
 
       <!-- Card One -->
-      <div class="mdc-card demo-card card-one">
+      <div class="mdc-card  card-one">
         <div class="mdc-card__primary mdc-card_content">
           <h2 class="mdc-card__title mdc-typography mdc-typography--headline6">Fire Damage Forecast</h2>
 
@@ -194,7 +247,7 @@
       </div>
 
       <!-- Danger Areas Card -->
-      <div class="mdc-card demo-card card-one areas-in-danger-card">
+      <div class="mdc-card  card-one areas-in-danger-card">
         <div class="mdc-card__primary mdc-card_content">
           <h2 class="mdc-card__title mdc-typography mdc-typography--headline6">Areas in Danger</h2>
 
@@ -222,7 +275,7 @@
 
   <!-- Location Card -->
   <div class="location-card">
-    <div class="mdc-card demo-card card-one">
+    <div class="mdc-card  card-one">
       <div class="mdc-card__primary mdc-card_content">
         <h2 class="mdc-typography mdc-typography--headline6">San Francisco, CA</h2>
         <h2 class="mdc-typography mdc-typography--subtitle2">26th December 2019</h2>
@@ -232,7 +285,7 @@
 
   <!-- Footer Timeline -->
   <div class="footer-card">
-    <div class="mdc-card demo-card card-one">
+    <div class="mdc-card  card-one">
       <div class="mdc-card__primary mdc-card_content">
         <h2 class="mdc-typography mdc-typography--headline6">Timeline</h2>
       </div>
