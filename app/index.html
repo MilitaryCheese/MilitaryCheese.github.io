@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8" />
+  <title>GWPS</title>
+
+  <!-- Meta data -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- Google Analytics Imports -->
+  <link href="//ajax.googleapis.com" rel="dns-prefetch" />
+
+  <!-- Mondernizr Import -->
+  <script src="assets/components/modernizr/modernizr.js"></script>
+
+  <!-- Material Design Imports -->
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet" />
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <!-- Importing Font -->
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+  <!-- Custom Overrides -->
+  <link href="assets/css/style.min.css" rel="stylesheet" />
+
+</head>
+
+<body class="mdc-typography">
+
+  <!-- Header Bar -->
+  <header class="mdc-top-app-bar mdc-top-app-bar--fixed mdc-top-app-bar--dense">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"><span
+          class="mdc-top-app-bar__title">San Francisco, CA</span> </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+        <button class="mdc-button mdc-button--raised"> <span class="mdc-button__ripple"></span>Analytics</button>
+        <button class="mdc-button mdc-button--raised"> <span class="mdc-button__ripple"></span>Log In</button>
+        <!-- <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded"
+          aria-label="Download">account_box</button> -->
+      </section>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="page-content">
+
+    <div class="right-card-content">
+      <!-- Card One - Input details  -->
+      <div class="mdc-card demo-card card-one">
+        <div class="mdc-card__primary mdc-card_content mdc-card-content-input">
+
+          <div
+            class="mdc-text-field mdc-text-field-location mdc-text-field--outlined mdc-text-field--with-trailing-icon ">
+            <i class="material-icons mdc-text-field__icon" tabindex="0" role="button">room</i>
+            <input class="mdc-text-field__input" id="text-field-hero-input">
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="text-field-hero-input" class="mdc-floating-label">Location</label>
+              </div>
+              <div class="mdc-notched-outline__trailing">
+              </div>
+            </div>
+          </div>
+
+          <div class="mdc-text-field mdc-text-field-date mdc-text-field--outlined mdc-text-field--with-trailing-icon ">
+            <i class="material-icons mdc-text-field__icon" tabindex="0" role="button">event</i>
+            <input class="mdc-text-field__input" id="text-field-hero-input">
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                <label for="text-field-hero-input" class="mdc-floating-label">Date</label>
+              </div>
+              <div class="mdc-notched-outline__trailing">
+              </div>
+            </div>
+          </div>
+          <a href="">Check Analytics</a>
+        </div>
+      </div>
+
+      <!-- Card Two - Map Options  -->
+      <div class="mdc-card demo-card card-one">
+        <div class="mdc-card__primary mdc-card_content">
+
+          <h2 class="demo-card__title mdc-typography mdc-typography--headline6">Map Options</h2>
+
+          <div class="mdc-form-field">
+            <div class="checkbox-area checkbox-1">
+              <div class="mdc-checkbox">
+                <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-1" />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+                <div class="mdc-checkbox__ripple"></div>
+              </div>
+              <label for="checkbox-1">Checkbox 1</label>
+            </div>
+            <div class="checkbox-area checkbox-1">
+              <div class="mdc-checkbox">
+                <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-1" />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+                <div class="mdc-checkbox__ripple"></div>
+              </div>
+              <label for="checkbox-1">Checkbox 1</label>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Card Three - Tabbed -->
+      <div class="mdc-card mdc-tab-area card-two">
+        <div class="mdc-tab-bar" role="tablist">
+          <div class="mdc-tab-scroller">
+            <div class="mdc-tab-scroller__scroll-area">
+              <div class="mdc-tab-scroller__scroll-content">
+                <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                  <span class="mdc-tab__content">
+                    <span class="mdc-tab__text-label mdc-typography mdc-typography--subtitle2">Weather</span>
+                  </span>
+                  <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                  </span>
+                  <span class="mdc-tab__ripple"></span>
+                </button>
+                <button class="mdc-tab mdc-tab" role="tab" aria-selected="true" tabindex="0">
+                  <span class="mdc-tab__content">
+                    <span class="mdc-tab__text-label">FMC</span>
+                  </span>
+                  <span class="mdc-tab-indicator mdc-tab-indicator">
+                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                  </span>
+                  <span class="mdc-tab__ripple"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content content--active weather-tab">
+          <div class="main-weather-area">
+            <p class="mdc-typography mdc-typography--subtitle2">Cloudy</p>
+            <h1 lass="mdc-typography mdc-typography--headline1">42°</h1>
+          </div>
+          <div class="sub-weather-area">
+            <p class="mdc-typography mdc-typography--subtitle2">8 mph wind</p>
+            <p class="mdc-typography mdc-typography--subtitle2">23% humidity</p>
+            <p class="mdc-typography mdc-typography--subtitle2">81% chance of rain</p>
+            <button class="mdc-button mdc-button--outlined"> <span class="mdc-button__ripple"></span> Learn
+              More</button>
+          </div>
+        </div>
+        <div class="content">
+          <h3 class="mdc-typography mdc-typography--subtitle2">Content two</h3>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="left-card-content">
+
+      <!-- Card One -->
+      <div class="mdc-card demo-card card-one">
+        <div class="mdc-card__primary mdc-card_content">
+          <h2 class="mdc-card__title mdc-typography mdc-typography--headline6">Fire Damage Forecast</h2>
+
+          <div class="fire-damange-detail">
+            <p class="fire-damage-label mdc-typography mdc-typography--body2">Fire Weather Index (FWI)</p>
+            <p class="fire-damage-value mdc-typography mdc-typography--body2">138.2</p>
+          </div>
+          <div class="fire-damange-detail">
+            <p class="fire-damage-label mdc-typography mdc-typography--body2">Initial Spread Index (ISI)</p>
+            <p class="fire-damage-value mdc-typography mdc-typography--body2">68.9</p>
+          </div>
+          <div class="fire-damange-detail">
+            <p class="fire-damage-label mdc-typography mdc-typography--body2">Buildup Index (BUI)</p>
+            <p class="fire-damage-value mdc-typography mdc-typography--body2">94.5</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Danger Areas Card -->
+      <div class="mdc-card demo-card card-one areas-in-danger-card">
+        <div class="mdc-card__primary mdc-card_content">
+          <h2 class="mdc-card__title mdc-typography mdc-typography--headline6">Areas in Danger</h2>
+
+          <div class="areas-in-danger-header">
+            <h2 class="mdc-card__title mdc-typography mdc-typography--body1">Location</h2>
+            <h2 class="mdc-card__title mdc-typography mdc-typography--body1">Predication Rate</h2>
+          </div>
+          <div class="areas-in-danger-detail">
+            <p class="fire-damage-label mdc-typography mdc-typography--body2">Fire Weather Index (FWI)</p>
+            <p class="fire-damage-value mdc-typography mdc-typography--body2">138.2</p>
+          </div>
+          <div class="areas-in-danger-detail">
+            <p class="fire-damage-label mdc-typography mdc-typography--body2">Initial Spread Index (ISI)</p>
+            <p class="fire-damage-value mdc-typography mdc-typography--body2">68.9</p>
+          </div>
+          <div class="areas-in-danger-detail">
+            <p class="fire-damage-label mdc-typography mdc-typography--body2">Buildup Index (BUI)</p>
+            <p class="fire-damage-value mdc-typography mdc-typography--body2">94.5</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Location Card -->
+  <div class="location-card">
+    <div class="mdc-card demo-card card-one">
+      <div class="mdc-card__primary mdc-card_content">
+        <h2 class="mdc-typography mdc-typography--headline6">San Francisco, CA</h2>
+        <h2 class="mdc-typography mdc-typography--subtitle2">26th December 2019</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Timeline -->
+  <div class="footer-card">
+    <div class="mdc-card demo-card card-one">
+      <div class="mdc-card__primary mdc-card_content">
+        <h2 class="mdc-typography mdc-typography--headline6">Timeline</h2>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Jquery Scripts -->
+  <script src="assets/components/jquery/jquery.min.js"></script>
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.js"></script>
+  <script src="assets/js/scripts.min.js"></script>
+
+</body>
+
+</html>
