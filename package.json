@@ -10,6 +10,7 @@
     "url": "http://github.com/HosseinKarami/fastshell.git"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
@@ -20,7 +21,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^1.5.1",
-    "jshint": "^2.8.0"
+    "jshint": "^2.8.0",
+    "node-sass": "^4.13.0"
   },
   "dependencies": {
     "@material/textfield": "^4.0.0",

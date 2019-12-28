@@ -1,3 +1,42 @@
+//Value Variables
+$unit: 16px;
+
+//Font Variables
+$inputFontSize: 0.9rem;
+
+//Color Variables
 $base : #F7F6F0;
 $darken : darken(#F7F6F0 , 30%);
 $back: darken(#F7F6F0, 40%);
+
+$primaryOrange: #f7931e;
+$primaryRed: #f15a24;
+
+$greyShade0: #edecf3;
+$greyShade1: #dcd9e7;
+$greyShade2: #ada9c2;
+$greyShade3: #82859e;
+$greyShade4: #656778;
+
+
+:root {
+    --mdc-theme-primary: $primaryOrange;
+    --mdc-theme-secondary: $primaryRed; 
+  }
+
+  $primaryGradient: linear-gradient(to left,$primaryOrange, $primaryRed);
+
+
+  // @mixin mdc-floating-label-float-position($positionY, $positionX: 0%, $scale: .75) {
+  //   .mdc-floating-label--float-above {
+  //     @if $positionX > 0 or $positionX < 0 {
+  //       transform: translateY(-1 * $positionY) translateX(-1 * $positionX) scale($scale);
+  
+  //       @include mdc-rtl {
+  //         transform: translateY(-1 * $positionY) translateX($positionX) scale($scale);
+  //       }
+  //     } @else {
+  //       transform: translateY(-1 * $positionY) scale($scale);
+  //     }
+  //   }
+  // }

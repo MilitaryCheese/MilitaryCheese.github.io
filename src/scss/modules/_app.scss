@@ -4,7 +4,7 @@
 $map-img: url("map.png");
 
 
-html * :not(.material-icons){
+html * :not(.material-icons):not(.fas){
     font-family: "lato", sans-serif !important;
 }
 
@@ -13,8 +13,30 @@ body {
 }
 
 //Header content
-.mdc-top-app-bar__title{
-    font-family: "lato", sans-serif;
+.mdc-top-app-bar{
+    background-image: $primaryGradient;
+    border-radius: 0 0 0 50px;
+    .mdc-top-app-bar__row{
+        height: 40px;
+        .mdc-top-app-bar__section--align-end{
+            margin-right: $unit;
+            .mdc-button{
+                height: 24px;
+                background: white;
+                color: orange;
+                border-radius: 2px;
+                margin-left: 4px;
+                font-weight: 800;
+                font-size: 12px;
+                @include boxShadowOverride;
+            }
+        }
+    }
+    .mdc-top-app-bar__title{
+        padding-left: 28px;
+        font-weight: 700;
+        font-size: 1rem;
+    }
 }
 
 //Page content
@@ -30,28 +52,46 @@ body {
 }
 
 //CARD DESIGN OVERRIDES
-
-
 .mdc-card {
-    margin-bottom: 16px;
+    margin-bottom: $unit;
     min-width: 200px;
 
     .mdc-card_content {
-        padding: 16px;
+        padding: 8px 16px 16px 16px;
+        .check-analysis-btn {
+            margin-top: 8px;
+            height: 24px;
+            font-size: 12px;
+            width: fit-content;
+            align-self: flex-end;
+        }
     }
     .mdc-text-field{
         width: 100%;
-        margin: 5px 0;
+        margin: 8px 0;
     }
     .fire-damange-detail{
-       
         @include cardLayout;
     }
-
-    .mdc-card-content-input{
+    .search-card-content{
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        .search-card-header{
+            margin-bottom: unset;
+        }
+    }
+    .map-options-card-content{
+        .options-card-header{
+            margin-bottom: unset;
+        }
+    }
+    .mdc-typography--headline6 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: $greyShade3;
+    }
+    .material-icons{
+        font-size: $unit;
     }
 }
 .areas-in-danger-card{
@@ -80,17 +120,87 @@ body {
     }
 }
 
-//TABL DESIGN OVERRIDES
+//TAB DESIGN OVERRIDES
 .mdc-tab-area{
     .content {
         display: none;
     }
-    .content--active {
+    .content--active{
         display: flex;
+        flex-direction: column;
+    }
+    .weather-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .mdc-typography--headline1{
+            margin: unset;
+        }
+        .main-weather-area{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .descriptive-weather{
+                color: $greyShade3;
+                .fas{
+                    margin-right: 4px;
+                    margin-top: 2px;
+                }
+            }
+            .mdc-typography--headline3{
+                margin: unset;
+                color: $greyShade3;
+            }
+            .mdc-typography--subtitle2{
+                margin-bottom: 4px;
+            }
+        }
+        .sub-weather-area{
+            color: $greyShade3;
+            .weather-desc{
+                display: flex;
+                align-items: center;
+                p{
+                    margin: unset;
+                }
+                .fas{
+                    margin-right: 4px;
+                    margin-top: 2px;
+
+                }
+            }
+            .humidity-span{
+                .fas{
+                    margin-right: 8px;
+                }
+            }
+        }
     }
     .weather-tab{
-        padding: 16px;
-        justify-content: space-evenly;
+        padding: $unit;
+        display: flex;
+        flex-direction: column;
+        .descriptive-weather{
+            display: flex;
+        }
+    }
+    .mdc-typography--headline1{
+        margin: unset;
+    }
+}
+.mdc-tab{
+    height: 30px;
+    background: $greyShade0;
+}
+.mdc-tab-bar{
+    .mdc-tab--active{
+        background-image: $primaryGradient;
+        .mdc-tab__content{
+            .mdc-tab__text-label{
+                color: white;
+            }
+        }
     }
 }
 
@@ -106,3 +216,52 @@ body {
     align-items: center;
 
 }
+
+//Text Input Overrides
+.mdc-text-field{
+    height: 30px;
+    .mdc-text-field__input{
+        font-size: $inputFontSize;
+    }
+    .mdc-notched-outline__notch{
+        width: 60px;
+        .mdc-floating-label{
+            font-size: $inputFontSize;
+            width: 90px;
+        }
+        .mdc-floating-label--float-above{
+            font-size: 1rem;
+            margin-top: 10px;
+            color: $greyShade4;
+        }
+    }
+}
+.mdc-text-field.mdc-text-field--focused{
+    .material-icons{
+        color: $primaryOrange;
+    }
+}
+
+//Checkbox Overrides
+.options-checkbox-area{
+    .checkbox-area{
+        display: flex;
+        label{
+            color: $greyShade3;
+        }
+    }
+    .mdc-checkbox{
+        padding-bottom: 4px;
+        .mdc-checkbox__background{
+            width: 15px;
+            height: 15px;
+        }
+    }
+    .mdc-checkbox--selected{
+        background: red;
+    }
+    .mdc-checkbox__ripple{
+        display: none;
+    }
+}
+   
