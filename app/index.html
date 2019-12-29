@@ -22,8 +22,12 @@
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
-  <!-- Importing Font -->
-  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!--Importing Font-->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin-ext" rel="stylesheet">
 
   <!-- FontAwesome Kit Link -->
   <script src="https://kit.fontawesome.com/42a18a18ee.js" crossorigin="anonymous"></script>
@@ -193,9 +197,8 @@
             <h2 class="__title mdc-typography weather-header mdc-typography--headline6">Weather</h2>
             <div class="weather-content">
               <div class="main-weather-area">
-                <div class="descriptive-weather">
-                  <i class="fas fa-cloud"></i>
-                  <p class="mdc-typography mdc-typography--subtitle2">Cloudy</p>
+                <div class="descriptive-weather" id="descriptive-weather">
+                  <!-- Weather section set dynamically in the scripts -->
                 </div>
                 <h1 class="mdc-typography mdc-typography--headline3">42°</h1>
               </div>
@@ -217,7 +220,35 @@
           </div>
         </div>
         <div class="content content-two">
-          <h3 class="mdc-typography mdc-typography--subtitle2">Content two</h3>
+          <div class="fmc-tab">
+            <h2 class="__title mdc-typography fmc-header mdc-typography--headline6">Fuel Moisture Content</h2>
+            <div class="fmc-table-header">
+              <p class="mdc-typography mdc-typography--subtitle1">Vegetation</p>
+              <p class="mdc-typography mdc-typography--subtitle1">%</p>
+            </div>
+            <hr />
+            <div class="fmc-table-content">
+              <div class="fmc-table-row critical-area">
+                <p class="mdc-typography label mdc-typography--subtitle2">Forests</p>
+                <p class="mdc-typography value mdc-typography--subtitle2">89.5%</p>
+              </div>
+              <hr />
+              <div class="fmc-table-row moderate-area">
+                <p class="mdc-typography label mdc-typography--subtitle2">Grasslands</p>
+                <p class="mdc-typography value mdc-typography--subtitle2">45.8%</p>
+              </div>
+              <hr />
+              <div class="fmc-table-row major-area">
+                <p class="mdc-typography label mdc-typography--subtitle2">Plants</p>
+                <p class="mdc-typography value mdc-typography--subtitle2">78.2%</p>
+              </div>
+              <hr />
+              <div class="fmc-table-row safe-area">
+                <p class="mdc-typography label mdc-typography--subtitle2">Soil</p>
+                <p class="mdc-typography value mdc-typography--subtitle2">32.8%</p>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -225,58 +256,77 @@
 
     <div class="left-card-content">
 
-      <!-- Card One -->
-      <div class="mdc-card  card-one">
-        <div class="mdc-card__primary mdc-card_content">
+      <!-- Card for WildFire Forecast -->
+      <div class="mdc-card wf-forecast-card">
+        <div class="mdc-card__primary mdc-card_content wf-forecast-content">
           <h2 class="mdc-card__title mdc-typography mdc-typography--headline6">Fire Damage Forecast</h2>
+          <div class="wf-forecast-area">
+            <div class="major-forecast">
+              <div class="fire-damage-detail critical-area">
+                <p class="fire-damage-value mdc-typography wf-value mdc-typography--body2">138.2</p>
+                <p class="fire-damage-label mdc-typography wf-label mdc-typography--body2">Fire Weather Index (FWI)</p>
+              </div>
+            </div>
+            <div class="sub-forecast">
+              <div class="fire-damage-detail moderate-area">
+                <p class="fire-damage-value mdc-typography wf-value mdc-typography--body2">68.9</p>
+                <p class="fire-damage-label mdc-typography wf-label mdc-typography--body2">Initial Spread Index (ISI)
+                </p>
+              </div>
+              <div class="fire-damage-detail safe-area">
+                <p class="fire-damage-value mdc-typography wf-value mdc-typography--body2">94.5</p>
+                <p class="fire-damage-label mdc-typography wf-label mdc-typography--body2">Buildup Index (BUI)</p>
+              </div>
+            </div>
+          </div>
 
-          <div class="fire-damange-detail">
-            <p class="fire-damage-label mdc-typography mdc-typography--body2">Fire Weather Index (FWI)</p>
-            <p class="fire-damage-value mdc-typography mdc-typography--body2">138.2</p>
-          </div>
-          <div class="fire-damange-detail">
-            <p class="fire-damage-label mdc-typography mdc-typography--body2">Initial Spread Index (ISI)</p>
-            <p class="fire-damage-value mdc-typography mdc-typography--body2">68.9</p>
-          </div>
-          <div class="fire-damange-detail">
-            <p class="fire-damage-label mdc-typography mdc-typography--body2">Buildup Index (BUI)</p>
-            <p class="fire-damage-value mdc-typography mdc-typography--body2">94.5</p>
-          </div>
+
         </div>
 
       </div>
 
       <!-- Danger Areas Card -->
-      <div class="mdc-card  card-one areas-in-danger-card">
-        <div class="mdc-card__primary mdc-card_content">
+      <div class="mdc-card  areas-in-danger-card">
+        <div class="mdc-card__primary mdc-card_content aid-card-content">
           <h2 class="mdc-card__title mdc-typography mdc-typography--headline6">Areas in Danger</h2>
 
-          <div class="areas-in-danger-header">
-            <h2 class="mdc-card__title mdc-typography mdc-typography--body1">Location</h2>
-            <h2 class="mdc-card__title mdc-typography mdc-typography--body1">Predication Rate</h2>
+          <div class="aid-table-header">
+            <p class="mdc-typography mdc-typography--subtitle1">Location</p>
+            <p class="mdc-typography mdc-typography--subtitle1">%</p>
           </div>
-          <div class="areas-in-danger-detail">
-            <p class="fire-damage-label mdc-typography mdc-typography--body2">Fire Weather Index (FWI)</p>
-            <p class="fire-damage-value mdc-typography mdc-typography--body2">138.2</p>
+          <hr />
+          <div class="aid-table-content">
+            <div class="aid-table-row critical-area">
+              <p class="mdc-typography label mdc-typography--subtitle2">California</p>
+              <p class="mdc-typography value mdc-typography--subtitle2">82.1%</p>
+            </div>
+            <hr />
+            <div class="aid-table-row critical-area">
+              <p class="mdc-typography label mdc-typography--subtitle2">London</p>
+              <p class="mdc-typography value mdc-typography--subtitle2">76.7%</p>
+            </div>
+            <hr />
+            <div class="aid-table-row major-area">
+              <p class="mdc-typography label mdc-typography--subtitle2">Greece</p>
+              <p class="mdc-typography value mdc-typography--subtitle2">71.3%</p>
+            </div>
+            <hr />
+            <div class="aid-table-row major-area">
+              <p class="mdc-typography label mdc-typography--subtitle2">Rome</p>
+              <p class="mdc-typography value mdc-typography--subtitle2">69.8%</p>
+            </div>
           </div>
-          <div class="areas-in-danger-detail">
-            <p class="fire-damage-label mdc-typography mdc-typography--body2">Initial Spread Index (ISI)</p>
-            <p class="fire-damage-value mdc-typography mdc-typography--body2">68.9</p>
-          </div>
-          <div class="areas-in-danger-detail">
-            <p class="fire-damage-label mdc-typography mdc-typography--body2">Buildup Index (BUI)</p>
-            <p class="fire-damage-value mdc-typography mdc-typography--body2">94.5</p>
-          </div>
-        </div>
 
+
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Location Card -->
   <div class="location-card">
-    <div class="mdc-card  card-one">
-      <div class="mdc-card__primary mdc-card_content">
+    <div class="mdc-card ">
+      <div class="mdc-card__primary mdc-card_content location-card-content">
         <h2 class="mdc-typography mdc-typography--headline6">San Francisco, CA</h2>
         <h2 class="mdc-typography mdc-typography--subtitle2">26th December 2019</h2>
       </div>
