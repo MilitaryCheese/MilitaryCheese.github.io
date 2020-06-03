@@ -1,0 +1,336 @@
+<!-- 
+  Hello 😊.
+
+  This template is designed and developed by Nisar Hassan Naqvi
+  for anyone to use for free or customize the way they like.
+
+  Github Repo: https://github.com/nisarhassan12/portfolio-template/
+  My Website: https://nisar.dev
+
+  For business & inquires, contact me => syednisarhassan12@gmail.com
+-->
+
+<!--
+  Follow the instructions written in comments to create your stunning portfolio
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+    <script src="https://kit.fontawesome.com/8f6a06b95a.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+
+    <!-- Put your site title here -->
+    <title>
+      Keshani Jayasinghe
+    </title>
+
+    <meta name="description" content="Add small description of yourslef." />
+    <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
+    <meta name="keywords" content="Put your name, skills and some coding keywords" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body onload="showSlides(1)">
+    <!-- ***** Header ***** -->
+
+    <header class="header" role="banner" id="top">
+      <div class="row">
+        <nav class="nav" role="navigation">
+          <ul class="nav__items">
+            <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
+            <li class="nav__item"><a href="#experiences" class="nav__link">Experiences</a></li>
+            <li class="nav__item"><a href="#achievements" class="nav__link">Achievements</a></li>
+            <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__text-box row">
+        <div class="header__text">
+          <img src="./images/pro-pic.jpg" class="profile_img" />
+          <span>
+            <h1 class="heading-primary">
+              <!-- Replace the following name with your name -->
+              <span>KESHANI JAYASINGHE</span>
+            </h1>
+            <!-- Put a small paragraph about yourself -->
+            <p class="sub-header">BEng (Hons) Software Engineering, Informatics Institute of Technology</p>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+      <!-- ***** Work ***** -->
+
+      <section class="work" id="work">
+        <div class="row">
+          <h2>PROJECTS</h2>
+          <div class="work__boxes">
+            <!-- Each div with the work__box class is a project. -->
+
+            <div class="work__box">
+              <div class="work__text">
+                <h3>Cryptojacking Attack Detection System</h3>
+                <p>
+                  Performance data based detection system for real-time cryptojacking attacks in cloud infrastructure.
+                </p>
+
+                <p>Cryptomining is the deed of using an individual’s or an organization’s computational power in order to mine cryptocurrency. Doing so without the explicit consent of the computer owners is called cryptojacking, and is considered illegitimate. During previous years, attackers’ focus was heavily laid on browser-based cryptojacking. However, it was noted that the attackers are now shifting their attention to more robust, more superior targets, such as cloud servers and cloud infrastructure. Poorly configured servers and outdated security groundwork has increased mining activities in the cloud.</p>
+                <span class="expandable-1" id="expandable-1">
+                  <p>Existing systems’ detection techniques rely heavily on evasive or exploitable metrics such as the solitary usage of CPU performance or Hardware Performance Counters. A range of evasion techniques are used by attackers to evade such systems: code obfuscation, dead-code injection, proxies and URL randomization, CPU throttling and artificial Hardware Performance Counter manipulation.</p>
+                  <p>The proposed system provides a novel detection classifier which can identify cryptojacking attacks in a cloud environment at runtime with near real-time performance. The system will utilize a range of performance variables, dynamically selected to guarantee the metrics has the highest correlation with the attack status. This will ensure the accurate classification of the attack status even within servers with secure high performing applications, workload spikes and stealthily configured miners with low CPU usage.</p>
+                  <p class="utilised_bullet">Process:</p>
+                  <ul class="work__list">
+                    <li>Acquired an original, time-series dataset of performance metrics of server instances under the attack of a cryptojacking by simulating a server cluster in Openstack and injecting with XMRig.</li>
+                    <li>Developed a Gaussian Naïve Bayes model on the collected and preprocessed data with 99.38% F-Measure.</li>
+                    <li>Incorporated the GNB model and threading mechanism to implement a python-based real-time detection application.</li>
+                    <li>Designed a RESTful backend server enabling the web-application to call server statuses synchronously</li>
+                    <li>Designed and developed the front-end of the web application with state management and real-time status updates.</li>
+                    <li class="utilised_bullet">Utilized: Openstack, Glances, Paramiko SHH Client, XMRig Miner, Python, Flask, React.js, Redux, Axios, Sass, Material UI, MongoDB.</li>
+                  </ul>
+                </span>
+
+                <a class="exp-btn" id="exp-1-btn" onclick="exp1Click()" value="Expand">Show More</a>
+
+                <div class="work_img">
+                  <img src="./images/project-2.png" class="work__image" alt="Project 1" />
+                </div>
+
+                <div class="work__links">
+                  <a href="http://kaggle.com/keshanijayasinghe/cryptojacking-attack-timeseries-dataset" target="_blank" class="link__text"> Dataset <span>&rarr;</span> </a>
+                  <a href="http://dl.acm.org/doi/10.1145/3379310.3379323" target="_blank" class="link__text"> Research Paper <span>&rarr;</span> </a>
+                  <a href="https://github.com/MilitaryCheese/Cryptojacking-Attack-Detection-System" title="View Source Code" target="_blank">
+                    <img src="./images/github.svg" class="work__code" alt="GitHub" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="work__box">
+              <div class="work__text">
+                <h3>Global Wildfire Prediction System</h3>
+                <p>
+                  Data-driven Wildfire Prediction Application
+                </p>
+                <p>
+                  Developed with the purpose of predicting wildfire in a scale before the fire spreads. A high focus has been layed in the data visualization and representation using the front end of the application. Tabulars and graphs are utlised to showcase relavant information and predictions derived. Geographic information and spatial data are mapped according to the dashboard requirements.
+                </p>
+                <p>Process:</p>
+                <ul class="work__list">
+                  <li>Designed and developed the front-end of a wildfire prediction and visualization web application with React and Redux.</li>
+                  <li>Integrated ArcGIS library to implement mapping and spatial analysis.</li>
+                  <li class="utilised_bullet">Utilized: React.js, Redux, React-Bootstrap, Sass, ArcGIS, Heroku, Gulp</li>
+                </ul>
+
+                <div class="work_img">
+                  <img src="./images/project-2.png" class="work__image" alt="Project 1" />
+                </div>
+              </div>
+            </div>
+
+            <div class="work__box">
+              <div class="work__text">
+                <h3>අpay Bila</h3>
+                <p>
+                  Bill-Management and Virtual Wallet Application
+                </p>
+                <p>Traditional bill keeping systems come with drawbacks such as inability in keeping recrods of the bills for a longer period of time etc. In addition, users face difficulties in bill splitting and money pooling in their day to day life. Apay bila is a mobile app that acts as a virtual bill wallet to keep track of the bills and helps the users track their daily, weekly and monthly expenses. Additionally, it aids in the bill splitting and money pooling processes.</p>
+                <p>Process:</p>
+                <ul class="work__list">
+                  <li>Designed and developed the front-end of a wildfire prediction and visualization web application with React and Redux.</li>
+                  <li>Conducted user survey to obtain an in-depth understanding of local user behavior.</li>
+                  <li class="utilised_bullet">Utilized: Flutter, Firebase, Optical Character Recognition</li>
+                </ul>
+
+                <div class="work_img">
+                  <img src="./images/project-2.png" class="work__image" alt="Project 1" />
+                </div>
+              </div>
+            </div>
+
+            <div class="work__box">
+              <div class="work__text">
+                <h3>Tute Log</h3>
+                <p>
+                  CRUD Application for Tutorial Management
+                </p>
+                <ul class="work__list">
+                  <li>Followed a MERN stack architecture to develop a CRUD application</li>
+                  <li>Utilized NodeJS Express to export RESP APIs and interact with MongoBD via Mongoose</li>
+                  <li>Developed ReactJS frontend for HTTP requests and responses using Axios</li>
+                  <li class="utilised_bullet">Utilized: Node.js, Express, React.js, React Router, Axios, Bootstrap, MongoDB</li>
+                </ul>
+
+                <div class="work_img">
+                  <img src="./images/project-2.png" class="work__image" alt="Project 1" />
+                </div>
+
+                <div class="work__links">
+                  <a href="https://github.com/MilitaryCheese/Cryptojacking-Attack-Detection-System" title="View Source Code" target="_blank">
+                    <img src="./images/github.svg" class="work__code" alt="GitHub" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="work__box">
+              <div class="work__text">
+                <h3>Throw</h3>
+                <p>
+                  Interactive Recreation Of The Classic Snake & Ladders Game With Iot Dice
+                </p>
+                <p>There are many physical board games out int he world, that can be played in various ways, and enjoyed by a multitude of people universally, regardless of their demographic differences such as the age, race or the religion. Recently, however, the rise of digitalized board games was noticeable, especially Tabletop games, as well as the adaptation of the players from the physical game to the digitalized game, due to many reasons such as convenience, low prices, attractive gameplay, and lack of geographical/physical boundaries and automation of certain functions. However total digitalization of the board games have made the traditional game loose its value in several directions. This includes the feel of the game, or the “magic” as many tradition players call it. The players does not have the same satisfaction they would receive when they physically roll a dice.</p>
+                <span class="expandable-2" id="expandable-2">
+                  <p>This project aims to make classic board games a more popular, revolutionized way of gaming, by making the game more interactive through the smart dice. We aim to connect players at a global scale, using multiplayer gaming mode. The dice will not only provide interactivity and the magical feeling of the traditional game, but also provide secure gameplay through fraud detection technology, and international leaderboards.</p>
+                  <p>Process:</p>
+                  <ul class="work__list">
+                    <li>Developed an interactive snake and ladders game with Unity with fraud detection algorithm</li>
+                    <li>Designed and built an electronic dice to compliment the developed game with LDR sensors, accelerometer and gyroscope.</li>
+                    <li>Designed custom graphics and animations for the gameplay</li>
+                    <li class="utilised_bullet">Utilised: Unity, Arduino</li>
+                  </ul>
+                </span>
+
+                <a class="exp-btn" id="exp-2-btn" onclick="exp2Click()" value="Expand">Show More</a>
+
+                <div class="work_img">
+                  <img src="./images/project-2.png" class="work__image" alt="Project 1" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***** Experiences ***** -->
+
+      <section class="experience" id="experiences">
+        <div class="row">
+          <h2>VOLUNTEERING EXPERIENCES</h2>
+          <div class="work__boxes">
+            <div class="work__box">
+              <div class="work__text">
+                <ul class="work__list">
+                  <li>IEEE Student Activities Committee 2019/2020 Designer and Webmaster</li>
+                  <li>IEEE Innovation Nation 2018 Design Team Lead</li>
+                  <li>IEEE Presidents Forum 2019 Head of Design</li>
+                  <li>IEEEXtreme 2018 Global Design Team Member</li>
+                  <li>IEEE SL Inspire Publicity Team Member</li>
+                  <li>IEEE SLSYWC 2017 Design Team Member</li>
+                  <li>IEEE R10 SS12 2018 Design Team Member</li>
+                  <li>IEEE Techno Meetup 2018 Design Team Member</li>
+                  <li>Code Sprint 3.0 Media Team Coordinator</li>
+                  <li>Finance Director of IEEE Computer Society of IIT</li>
+                  <li>Member of Rotaract Club / Rotaract Media Team of IIT</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+              <!-- Full-width images with number and caption text -->
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="./images/header-1.jpg" style="width: 100%;" />
+                <div class="text">Caption Text</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="./images/header.jpg" style="width: 100%;" />
+                <div class="text">Caption Two</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./images/header-2.jpg" style="width: 100%;" />
+                <div class="text">Caption Three</div>
+              </div>
+
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br />
+
+            <!-- The dots/circles -->
+            <div style="text-align: center;">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***** Achievements ***** -->
+
+      <section class="achievements" id="achievements">
+        <div class="row">
+          <h2>ACHIEVEMENTS</h2>
+          <div class="work__boxes">
+            <div class="work__box">
+              <div class="work__text">
+                <ul class="work__list">
+                  <li>2020 2nd Asia Pacific Information Technology Conference - Best Presentation of Session 1</li>
+                  <li>Semi Finalists of Plastic Data Challenge by The Incubation Network</li>
+                  <li>2018 Stage Craft Graphic Design Competition Winner</li>
+                  <li>2017 Stage Craft Graphic Design Competition Winner</li>
+                  <li>2017 Mini Hackathon IEEE IIT - 1st Place</li>
+                  <li>Colors award for Karate at Girls’ High School Colors Eve</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***** About ***** -->
+
+      <section class="portfolio" id="portfolio">
+        <div class="row">
+          <h2>PORTFOLIO</h2>
+          <div class="about__content">
+            <div class="about__text">
+              <a href="https://dribbble.com/emblemlk" class="btn portfolio-btn"><i class="fas fa-basketball-ball"></i>Dribble</a>
+              <a href="https://drive.google.com/drive/folders/0B8TQq0APSjBqVWlITTFkSXdmYTA?usp=sharing" class="btn portfolio-btn"><i class="fab fa-google-drive"></i>Drive</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ***** Footer ***** -->
+
+    <footer role="contentinfo" class="footer">
+      <div class="row">
+        <!-- Update the links to point to your accounts -->
+        <ul class="footer__social-links">
+          <li class="footer__social-link-item">
+            <a href="http://linkedin.com/in/keshanijayasinghe" title="Link to LinkedIn Profile">
+              <img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn" />
+            </a>
+          </li>
+          <li class="footer__social-link-item">
+            <a href="https://github.com/MilitaryCheese/" title="Link to Github Profile">
+              <img src="./images/github.svg" class="footer__social-image" alt="Github" />
+            </a>
+          </li>
+          <li class="footer__social-link-item">
+            <a href="mailto:kesh.jayasinghe@gmail.com" title="Link to Email">
+              <img src="./images/email.svg" class="footer__social-image" alt="Email" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <a href="#top" class="back-to-top" title="Back to Top">
+      <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image" />
+    </a>
+    <script src="./index.js"></script>
+  </body>
+</html>
