@@ -421,7 +421,11 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .header {
-  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.932)), url("./images/header-1.jpg");
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.932)
+    ),
+    url("./images/header-1.jpg");
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -524,6 +528,7 @@ body:not(.user-is-tabbing) a:focus {
 .work_img {
   margin: 10px 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -685,8 +690,33 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* Hide the images by default */
-.mySlides {
+.mySlidesCADS {
   display: none;
+}
+
+.mySlidesAB {
+  display: none;
+}
+
+.mySlidesGWPS {
+  display: none;
+}
+
+.mySlidesThrow {
+  display: none;
+}
+
+.mySlidesCADS:first-child {
+  display: unset;
+}
+.mySlidesAB:first-child {
+  display: unset;
+}
+.mySlidesGWPS:first-child {
+  display: unset;
+}
+.mySlidesThrow:first-child {
+  display: unset;
 }
 
 /* Next & previous buttons */
@@ -739,7 +769,10 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* The dots/bullets/indicators */
-.dot {
+.dotAB,
+.dotCADS,
+.dotGWPS,
+.dotThrow {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -779,4 +812,38 @@ body:not(.user-is-tabbing) a:focus {
   to {
     opacity: 1;
   }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  /* Compensate for excess margin on outer gallery flex items */
+  margin: -1rem -1rem;
+}
+
+.gallery-item {
+  /* Minimum width of 24rem and grow to fit available space */
+  flex: 1 0 24rem;
+  /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+  margin: 1rem;
+  border: 4px solid white;
+  overflow: hidden;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+  transform: scale(1.15);
+}
+
+.link-sec {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
